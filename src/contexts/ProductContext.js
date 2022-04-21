@@ -6,10 +6,8 @@ const addItem = () => {};
 
 export const ProductContext = createContext();
 
-export default function ProductContext(props) {
+export default function ProductProvider(props) {
   return (
-    <ProductContext.Provider product={product} addItem={addItem}>
-      {props.children}
-    </ProductContext.Provider>
+    <ProductContext.Provider value={{ product, addItem }}>{props.children}</ProductContext.Provider>
   );
 }
