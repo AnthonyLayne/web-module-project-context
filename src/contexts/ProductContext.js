@@ -1,13 +1,5 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 
-const product = {};
+const ProductContext = createContext();
 
-const addItem = () => {};
-
-export const ProductContext = createContext();
-
-export default function ProductProvider(props) {
-  return (
-    <ProductContext.Provider value={{ product, addItem }}>{props.children}</ProductContext.Provider>
-  );
-}
+export default ProductContext;
